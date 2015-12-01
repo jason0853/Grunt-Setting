@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 				transform: [ require('grunt-react').browserify ]
 			},
 			client: {
-				src: ['src/jsx/*.jsx'],
+				src: ['src/components/*.jsx'],
 				dest: 'test/js/app.js'
 			}
 		},
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 		// Fix jsx code and run again automatically 
 		watch: {
 			react: {
-		        		files: 'src/jsx/*.jsx',
+		        		files: 'src/components/*.jsx',
 		        		tasks: ['browserify', 'uglify'],
 		        		options: {
 			      		livereload: true
